@@ -43,6 +43,7 @@ appControllers.controller('authCtrl',function($scope,$rootScope,$location,$http,
 			if (data.success === false){
 				$scope.user.message = data.message;
 			}else{
+				setCreds($scope.user.username, $scope.user.password)
 				$rootScope.current_user = data.user;
 				$rootScope.auth = true;
 				$location.path('/');
