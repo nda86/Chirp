@@ -1,0 +1,128 @@
+body{
+	background: rgba(#109DEE,0.5);
+}
+
+#main{
+	background: #007D00;
+	width: 75%;
+	max-width: 680px;
+	margin: 0 auto;
+	padding-top: 20px;
+	h2.title{
+		display: block;
+		margin: 0 auto;
+		text-transform: uppercase;
+		color: #fff;
+		background: #00F24F;
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 25px;
+	}
+	#myform{
+
+		input{
+			display: block;
+			width: 95%;
+			margin: 0 auto;
+			padding: 10px;
+			border-radius: 7px;
+			border: none;
+		}
+		label{
+			display: block;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 15px;
+			color: #fff;
+		}
+		input[type="submit"]{
+			width: 100px;
+			margin: 10px auto;
+		}
+
+		.text-warning{
+			color: #FF7D7D;
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+	.user,.message{
+		display: block;
+		border-radius: 11px;
+		width: 85%;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		padding: 10px;
+		border: none;
+	}
+	span.user{
+			display: block;
+			padding: 15px;
+			background: #00FFED;
+			color: #000;
+			text-align: center;
+			width: 95%;
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+
+	.send{
+		display: block;
+		width:100px;
+		height: 55px;
+		margin: 0 auto;
+		background: #000;
+		color: orange;
+		border: none;
+		border-radius: 10px;
+		&:hover{
+			background: darkorange;
+			color: #fff;
+		}
+	}
+
+	.feed{
+		width: 100%;
+		margin-top: 20px;
+		// overflow: scroll;
+		h2{
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			background: #ccc;
+			border-bottom: 2px dotted red;
+			border-top: 2px dotted red;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center;
+			text-transform: capitalize;
+		}
+		.feed2{
+			background: rgba(#FF5D00,0.5);
+			// height: 250px;
+			padding: 15px;
+		}
+	}
+
+	.post{
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		border-bottom: 2px solid #000;
+		font-size: 1.3em;
+		color: #000;
+		font-weight: 700;
+		padding: 7px;
+	}
+}
+
+.odd{
+	text-align: left;
+	background: #6EFF83;
+	color: #000 !important;
+}
+
+.even{
+	text-align: right;
+	background: #FFCA72;
+}

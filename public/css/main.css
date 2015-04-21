@@ -1,0 +1,104 @@
+body {
+  background: rgba(16, 157, 238, 0.5); }
+
+#main {
+  background: #007D00;
+  width: 75%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-top: 20px; }
+  #main h2.title {
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #fff;
+    background: #00F24F;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px; }
+  #main #myform input {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 7px;
+    border: none; }
+  #main #myform label {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    color: #fff; }
+  #main #myform input[type="submit"] {
+    width: 100px;
+    margin: 10px auto; }
+  #main #myform .text-warning {
+    color: #FF7D7D;
+    font-size: 16px;
+    text-align: center; }
+  #main .user, #main .message {
+    display: block;
+    border-radius: 11px;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none; }
+  #main span.user {
+    display: block;
+    padding: 15px;
+    background: #00FFED;
+    color: #000;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 15px; }
+  #main .send {
+    display: block;
+    width: 100px;
+    height: 55px;
+    margin: 0 auto;
+    background: #000;
+    color: orange;
+    border: none;
+    border-radius: 10px; }
+    #main .send:hover {
+      background: darkorange;
+      color: #fff; }
+  #main .feed {
+    width: 100%;
+    margin-top: 20px; }
+    #main .feed h2 {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      background: #ccc;
+      border-bottom: 2px dotted red;
+      border-top: 2px dotted red;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      text-align: center;
+      text-transform: capitalize; }
+    #main .feed .feed2 {
+      background: rgba(255, 93, 0, 0.5);
+      padding: 15px; }
+  #main .post {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 2px solid #000;
+    font-size: 1.3em;
+    color: #000;
+    font-weight: 700;
+    padding: 7px; }
+
+.odd {
+  text-align: left;
+  background: #6EFF83;
+  color: #000 !important; }
+
+.even {
+  text-align: right;
+  background: #FFCA72; }
+
+/*# sourceMappingURL=main.css.map */
