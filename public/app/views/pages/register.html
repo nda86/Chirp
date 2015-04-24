@@ -1,0 +1,11 @@
+<div id="main">
+	<h2 class="title">Sign Up</h2>
+	<form id='myform' ng-Submit="signup.signup()">
+		<p class="text-warning">{{signup.message}}</p>
+		<label for="username">Username</label>
+		<input type="text" id="username" name="username" ng-model="signup.user.username">
+		<label for="username">Password</label>
+		<input type="password" id="password" name="password" ng-model="signup.user.password">
+		<input type="submit" value="Sign Up" class="btn btn-success">
+	</form>
+</div>

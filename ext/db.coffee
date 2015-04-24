@@ -1,5 +1,6 @@
 mongoose = require 'mongoose'
-uri = process.env.MONGOLAB_URI or 'mongodb://localhost/meandb'
-mongoose.connect uri
+config = require('../config.coffee')
+# uri = process.env.MONGOLAB_URI or 'mongodb://localhost/meandb'
+mongoose.connect config.database
 
 module.exports = mongoose
