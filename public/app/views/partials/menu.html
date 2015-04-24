@@ -1,7 +1,7 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" ng-controller="mainController as main">
 	<div class="container">
-		<a href="/" class="navbar-brand">{{label1}}</a>
-		<p class="navbar-text navbar-right" ng-hide="auth"><a href="/signup">Sign Up</a> or <a href="/signin" >Sign In</a></p>
-		<p class="navbar-text navbar-right" ng-show="auth">Wellcome {{current_user}} &middot; <a href="#" ng-click="signout()">Sign Out</a></p>
+		<a href="/posts" class="navbar-brand">{{label1}}</a>
+		<p class="navbar-text navbar-right" ng-if="!main.isLogged()"><a href="/signup">Sign Up</a> or <a href="/signin" >Sign In</a></p>
+		<p class="navbar-text navbar-right" ng-if="main.isLogged()">Wellcome {{main.username}} &middot; <a href="#" ng-click="main.signout()">Sign Out</a></p>
 	</div>
 </nav>

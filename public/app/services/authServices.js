@@ -87,20 +87,40 @@ authServices.factory('authUser',function(authToken, $http, $q){
 		authToken.setToken();
 	};
 
+	userFactory.isLogged = function(){
+		if (authToken.getToken()){
+			return true;
+		}else{
+			return false;
+		}
+	};
+
+	userFactory.getUser = function(){
+		return $http.post('/auth/me');
+	};
+
 	return userFactory;
 
 });
 
-authServices.factory('authInterceptor',function(authToken){
-	var factory;
-	factory.request = function(config){
-		var token = authToken.getToken();
-		if (token){
-			config.headers['x-access=token'] = token;
-		}
+
+authServices.factory('authInterceptor', function($q, $location, authToken) {
+	var interceptorFactory = {};
+// this will happen on all HTTP requests
+	interceptorFactory.request = function(config) {
+// grab the token
+	var token = authToken.getToken();
+// if the token exists, add it to the header as x-access-token
+	if (token) config.headers['x-access-token'] = token;
 		return config;
 	};
-
-	return factory;
-
+// happens on response errors
+	interceptorFactory.responseError = function(response) {
+// if our server returns a 403 forbidden response
+	if (response.status == 403)
+		$location.path('/signin');
+// return the errors from the server as a promise
+		return $q.reject(response);
+	};
+	return interceptorFactory;
 });

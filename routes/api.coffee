@@ -3,7 +3,7 @@ router = require('express').Router()
 isAuth = require '../ext/isAuth.coffee'
 
 
-# router.use '/posts', isAuth
+router.use '/posts', isAuth
 
 
 router.route '/posts'

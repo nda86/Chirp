@@ -1,7 +1,7 @@
 <div id="main">
 	<h2 class="title">Sign Up</h2>
 	<form id='myform' ng-Submit="signup.signup()">
-		<p class="text-warning">{{signup.message}}</p>
+		<div class="alert alert-danger" ng-if="signup.message">{{signup.message}}</div>
 		<label for="username">Username</label>
 		<input type="text" id="username" name="username" ng-model="signup.user.username">
 		<label for="username">Password</label>

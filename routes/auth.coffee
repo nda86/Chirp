@@ -32,4 +32,8 @@ router.get '/signout', (req,res) ->
 	req.session.destroy()
 	res.send message: 'You are logout success!'
 
+router.post '/me', (req,res,next) ->
+	console.log req.session.User
+	res.send req.session.User
+
 module.exports = router
